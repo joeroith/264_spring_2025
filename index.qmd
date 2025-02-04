@@ -1,5 +1,5 @@
 ---
-title: "MSCS 264: Data Science 2 (Fall 2024)"
+title: "SDS 264: Data Science 2 (Spring 2025)"
 sidebar: false
 ---
 
@@ -15,5 +15,5 @@ sidebar: false
 - [Course syllabus](https://drive.google.com/file/d/1xHpi_pmQL0bAkfE0cVgtM2vWd8AxeFPR/view?usp=sharing)
 - [RStudio server](https://r.stolaf.edu)
 - [moodle](https://mdl.stolaf.edu/login/index.php)
-- [GitHub source code for this website](https://github.com/proback/264_fall_2024)
+- [GitHub source code for this website](https://joeroith.github.io/264_spring_2025)
 
