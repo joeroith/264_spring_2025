@@ -29,5 +29,5 @@ A few additional details for this mini-project:
 
 ### Submission and Timeline
 
-Mini-Project 1 must be submitted on moodle by **11:00 PM on Fri Sep 20**.  You should submit your two static plots, along with descriptions and alt-text, in a pdf document.  For your interactive plots, just submit a GitHub link where I can see your code that would produce a nice html document.  Then, in Mini-Project 2, I will ask you to build a webpage where you will link to these interactive html pages.
+Mini-Project 1 must be submitted on Moodle by **11:00 PM on Fri Feb 21**.  You should submit your two static plots, along with descriptions and alt-text, in a pdf document.  For your interactive plots, just submit a GitHub link where I can see your code that would produce a nice html document.  Then, in Mini-Project 2, I will ask you to build a webpage where you will link to these interactive html pages.
 
