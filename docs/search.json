@@ -25,5 +25,12 @@
     "crumbs": [
       "Mini-Project 1: Maps"
     ]
+  },
+  {
+    "objectID": "rtipoftheday.html",
+    "href": "rtipoftheday.html",
+    "title": "R Tip of the Day",
+    "section": "",
+    "text": "Signup Sheet\nCool presentations using Quarto\nMy example of an RTD presentation with revealjs in quarto\nRTD rubric"
   }
 ]
