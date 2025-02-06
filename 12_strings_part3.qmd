@@ -60,10 +60,12 @@ as_tibble(words) |>
 We will check out the Rotten Tomatoes page for the 2017 movie Coco, scrape information from that page (we'll get into web scraping in a few weeks!), clean it up into a usable format, and answer some questions using strings and regular expressions.
 
 ```{r}
+#| eval: false
+
 # used to work
 # coco <- read_html("https://www.rottentomatoes.com/m/coco_2017")
 
-robotstxt::paths_allowed("https://www.rottentomatoes.com/m/coco_2017")
+#robotstxt::paths_allowed("https://www.rottentomatoes.com/m/coco_2017")
 
 library(polite)
 coco <- "https://www.rottentomatoes.com/m/coco_2017" |>
@@ -91,6 +93,8 @@ user_reviews <- html_text(user_reviews)
 a) Explain how the code below helps clean up both `user_reviews` and `top_reviews` before we start using them.
 
 ```{r}
+#| eval: false
+
 user_reviews <- str_trim(user_reviews)
 top_reviews <- str_trim(top_reviews)
 ```

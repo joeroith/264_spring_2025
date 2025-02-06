@@ -15,5 +15,5 @@ sidebar: false
 - [Course syllabus](https://docs.google.com/document/d/1pYegIaSU8RQU_7LX-XsxUMueVv5CJoe5dwPoJs0v9TE/edit?usp=sharing)
 - [RStudio server](https://r.stolaf.edu)
 - [moodle](https://mdl.stolaf.edu/login/index.php)
-- [GitHub source code for this website](https://joeroith.github.io/264_spring_2025)
+- [GitHub source code for this website](https://github.com/joeroith/264_spring_2025)
 
