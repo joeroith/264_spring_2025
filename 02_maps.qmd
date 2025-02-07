@@ -7,7 +7,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-You can download this .qmd file from [here](https://github.com/proback/264_fall_2024/blob/main/02_maps.qmd).  Just hit the Download Raw File button.
+You can download this .qmd file from [here](https://github.com/joeroith/264_spring_2025/blob/main/02_maps.qmd).  Just hit the Download Raw File button.
 
 
 ```{r}
@@ -57,7 +57,9 @@ For example, let's consider state vaccination data from March 2021.
 #| message: false
 #| warning: false
 
-vaccines <- read_csv("https://proback.github.io/264_fall_2024/Data/vacc_Mar21.csv") 
+
+
+vaccines <- read_csv("https://joeroith.github.io/264_spring_2025/Data/vacc_Mar21.csv") 
 
 vacc_mar13 <- vaccines |>
   filter(Date =="2021-03-13") |>
@@ -89,7 +91,7 @@ us_states |>
 
 Other maps provided by the `maps` package include US counties, France, Italy, New Zealand, and two different views of the world. If you want maps of other countries or regions, you can often find them online.
 
-Where the really cool stuff happens is when we join our data to the `us_states` dataframe.  Notice that the state name appears in the "region" column of `us_states`, and that the state name is in all small letters. In `vacc_mar13`, the state name appears in the State column and is in title case.  Thus, we have to be very careful when we join the state vaccine info to the state geography data.
+Where the really cool stuff happens is when we join our data to the `us_states` dataframe.  Notice that the state name appears in the "region" column of `us_states`, and that the state name is in all small letters. In `vacc_mar13`, the state name appears in the State column and is in lower case.  Thus, we have to be very careful when we join the state vaccine info to the state geography data.
 
 Run this line by line to see what it does:
 
@@ -270,8 +272,8 @@ Let's try pop-up messages with a data set containing Airbnb listings in the Bost
 #| message: false
 #| include: false
 
-#airbnb.df <- read_csv("https://raw.githubusercontent.com/proback/264_fall_2024/main/Data/airbnbData.csv") 
-airbnb.df <- read_csv("https://proback.github.io/264_fall_2024/Data/airbnbData.csv") 
+#airbnb.df <- read_csv("https://raw.githubusercontent.com/joeroith/264_spring_2025/main/Data/airbnbData.csv") 
+airbnb.df <- read_csv("https://joeroith.github.io/264_spring_2025/Data/airbnbData.csv") 
 ```
 
 ```{r}
@@ -359,9 +361,9 @@ states <- states |>
 
 labels <- lapply(states$labels, HTML)
 
-leaflet(states) %>%
-  setView(-96, 37.8, 4) %>%
-  addTiles() %>%
+leaflet(states) |>
+  setView(-96, 37.8, 4) |>
+  addTiles() |>
   addPolygons(
     fillColor = ~pal(density),
     weight = 2,
@@ -379,7 +381,7 @@ leaflet(states) %>%
     labelOptions = labelOptions(
       style = list("font-weight" = "normal", padding = "3px 8px"),
       textsize = "15px",
-      direction = "auto")) %>%
+      direction = "auto")) |>
   addLegend(pal = pal, values = ~density, opacity = 0.7, title = NULL,
     position = "bottomright")
 ```
