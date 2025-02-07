@@ -3,9 +3,6 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
-    - "!miniproject4.qmd"
-    - "!09_web_scraping.qmd"
-    - "!08_table_scraping.qmd"
     - "!07_apis.qmd"
     - "!13_text_analysis.qmd"
     - "!DS2_preview_work/"

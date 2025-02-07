@@ -183,7 +183,7 @@ vacc_mar13 |>
 
 ### Multiple maps!  
 
-You can still use data viz tools from Data Science 1 (like facetting) to create things like time trends in maps:
+You can still use data viz tools from Data Science 1 (like faceting) to create things like time trends in maps:
 
 ```{r}
 #| message: false

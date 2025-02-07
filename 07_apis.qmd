@@ -142,7 +142,7 @@ Check your email. Copy and paste your key into a new text file:
 You could then read in the key with code like this:
 
 ```{r}
-myapikey <- readLines("~/264_fall_2024/DS2_preview_work/census_api_key.txt")
+#myapikey <- readLines("~/264_fall_2024/DS2_preview_work/census_api_key.txt")
 ```
 
 
