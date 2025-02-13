@@ -8,7 +8,7 @@ editor_options:
 
 Based on Chapter 25 from *R for Data Science*
 
-You can download this .qmd file from [here](https://github.com/proback/264_fall_2024/blob/main/03_functions.qmd).  Just hit the Download Raw File button.
+You can download this .qmd file from [here](https://github.com/joeroith/264_spring_2025/blob/main/03_functions.qmd).  Just hit the Download Raw File button.
 
 ### Introduction (from Ch 25 of R4DS)
 
@@ -107,11 +107,11 @@ name <- function(arguments) {
 
 Every function contains 3 essential components:
 
-  - A name. The name should clearly evoke what the function does; hence, it is often a verb (action).  Here we’ll use rescale01 because this function rescales a vector to lie between 0 and 1.  snake_case is good; CamelCase is just okay.
-  - The arguments. The arguments are things that vary across calls and they are usually nouns - first the data, then other details.  Our analysis above tells us that we have just one; we’ll call it x because this is the conventional name for a numeric vector, but you can use any word.
-  - The body. The body is the code that’s repeated across all the calls.  By default a function will return the last statement; use `return()` to specify a return value
+  1. A **name**. The name should clearly evoke what the function does; hence, it is often a verb (action).  Here we'll use rescale01 because this function rescales a vector to lie between 0 and 1.  snake_case is good; CamelCase is just okay.
+  2. The **arguments**. The arguments are things that vary across calls and they are usually nouns - first the data, then other details.  Our analysis above tells us that we have just one; we'll call it x because this is the conventional name for a numeric vector, but you can use any word.
+  3. The **body**. The body is the code that's repeated across all the calls.  By default a function will return the last statement; use `return()` to specify a return value
 
-**Summary:** Functions should be written for both humans and computers!
+> **Summary:** Functions should be written for both humans and computers!
 
 
 Once we have written a function we like, then we need to test it with different inputs!
@@ -220,8 +220,8 @@ rescale_basic <- function(x) {
   (x - min(x)) / (max(x) - min(x))
 }
 
-df %>%
-  filter(!is.na(a)) %>%
+df |>
+  filter(!is.na(a)) |>
   mutate(new_a = rescale_basic(a))
 ```
 
@@ -356,12 +356,12 @@ The problem is tidy evaluation, which makes most common coding easier, but makes
   - data-variables = live in data frame or tibble (cty)
   - data masking = tidyverse use data-variables as if they are env-variables.  That is, you don't always need `mpg$cty` to access `cty` in tidyverse
   
-The key idea behind data masking is that it blurs the line between the two different meanings of the word “variable”:
+The key idea behind data masking is that it blurs the line between the two different meanings of the word "variable":
 
-  - env-variables are “programming” variables that live in an environment. They are usually created with <-.
-  - data-variables are “statistical” variables that live in a data frame. They usually come from data files (e.g. .csv, .xls), or are created manipulating existing variables.
+  - env-variables are "programming" variables that live in an environment. They are usually created with <-.
+  - data-variables are "statistical" variables that live in a data frame. They usually come from data files (e.g. .csv, .xls), or are created manipulating existing variables.
 
-The solution is to embrace {{ }} data-variables which are user inputs into functions.  One way to remember what’s happening, as suggested by our book authors, is to think of {{ }} as looking down a tunnel — {{ var }} will make a dplyr function look inside of `var` rather than looking for a variable called `var`.  Thus, embracing a variable tells dplyr to use the value stored inside the argument, not the argument as the literal variable name.
+The solution is to embrace {{ }} data-variables which are user inputs into functions.  One way to remember what's happening, as suggested by our book authors, is to think of {{ }} as looking down a tunnel — {{ var }} will make a dplyr function look inside of `var` rather than looking for a variable called `var`.  Thus, embracing a variable tells dplyr to use the value stored inside the argument, not the argument as the literal variable name.
 
 See Section 25.3 of R4DS for more details (and there are plenty!).
 
@@ -547,7 +547,7 @@ flights |> sorted_bars(carrier)
 
 Finally, it would be really helpful to label plots based on user inputs.  This is a bit more complicated, but still do-able!
 
-For this, we'll need the `rlang` package.  `rlang` is a low-level package that’s used by just about every other package in the tidyverse because it implements tidy evaluation (as well as many other useful tools).
+For this, we'll need the `rlang` package.  `rlang` is a low-level package that's used by just about every other package in the tidyverse because it implements tidy evaluation (as well as many other useful tools).
 
 Check out the following update of our `histogram()` function which uses the `englue()` function from the `rlang` package:
 
@@ -593,7 +593,7 @@ flights |> histogram(air_time, 35)
 8. Here is a way to get `not_cancelled` flights in the flights dataset:
 
 ```{r}
-not_cancelled <- flights %>% 
+not_cancelled <- flights |> 
   filter(!is.na(dep_delay), !is.na(arr_delay))
 ```
 
