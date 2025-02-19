@@ -47,6 +47,5 @@ sidebar: false
 ![](images/rconnect_url.jpg){width=50%}
 
 ![](images/last_step.jpg){width=50%}
-
 :::
 
