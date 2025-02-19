@@ -1,8 +1,8 @@
 ---
 title: "R Tip of the Day Example"
 subtitle: "The gganimate package"
-author: "Paul Roback"
-date: "January 1, 2025"
+author: "Joe Roith"
+date: "February 25, 2025"
 format:
   revealjs: 
     slide-number: true
