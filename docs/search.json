@@ -31,7 +31,7 @@
     "href": "rtipoftheday.html",
     "title": "R Tip of the Day",
     "section": "",
-    "text": "Signup Sheet\nCool presentations using Quarto\nMy example of an RTD presentation with revealjs in quarto\nRTD rubric"
+    "text": "Signup Sheet\nHow to create cool presentations using Quarto\nCode for creating the presentation above\nMy example of an RTD presentation with revealjs in quarto\nCode for my example\nRTD rubric\n\nTIP: Create your presentation in a new project (separate from the one you created for class). You can run the presentation from your own machine OR you can publish it to the RStudio/Posit Connect server. To do this:\n\n\nRender your presentation.\nClick the ‘Publish’ icon in the upper right corner of the screen.\nSelect Posit Connect as the server to publish to.\nChoose to publish the finished product only.\nAt this point if you are doing it for the first time, you will be asked to connect to an account. Choose Posit Connect.\nEnter “https://rconnect.stolaf.edu” as the URL then click next.\nAt this point you will be redirected to a webpage to sign in. Use your stolaf account to log in and follow the instructions to connect your RStudio to the server. Go back to your desktop RStudio and click ‘Connect Account’.\nNow you are ready to publish the document. Give it a good name and click ‘Publish’.\nAfter a minute or two, you will again be redirected to a browser where your document is now available. Edit the Share settings appropriately (Anyone - no login required is fine, but be aware that others will be able to see your work). Copy the Content URL to share.\n\n\n\n\n\n\n\n\n\n\nPublish\n\n\n\n\n\n\n\n\n\nStep 2\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nLast Step"
   },
   {
     "objectID": "02_maps.html",
