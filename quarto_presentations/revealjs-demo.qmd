@@ -354,8 +354,8 @@ Include Jupyter widgets and htmlwidgets in your presentations
 #| echo: false
 #| fig-height: 5
 library(leaflet)
-leaflet() %>%
-  addTiles() %>%  # Add default OpenStreetMap map tiles
+leaflet() |>
+  addTiles() |>  # Add default OpenStreetMap map tiles
   addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
 ```
 
