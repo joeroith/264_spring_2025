@@ -6,7 +6,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-You can download this .qmd file from [here](https://github.com/proback/264_fall_2024/blob/main/05_iteration.qmd).  Just hit the Download Raw File button.
+You can download this .qmd file from [here](https://github.com/joeroith/264_spring_2025/blob/main/05_iteration.qmd).  Just hit the Download Raw File button.
 
 This leans on parts of [R4DS Chapter 26: Iteration](https://r4ds.hadley.nz/iteration), in addition to parts of the first edition of R4DS.
 
@@ -23,7 +23,7 @@ library(tidyverse)
 
 Reducing duplication of code will reduce errors and make debugging much easier.  We've already seen how functions (Ch 25) can help reduce duplication by extracting repeated patterns of code.  Another tool is **iteration**, when you find you're doing the same thing to multiple inputs -- repeating the same operation on different columns or datasets.  
 
-Here we'll see two important iteration paradigms: imperative programming and functional programming.
+Here we'll see two important iteration paradigms: **imperative** programming and **functional** programming.
 
 ## Imperation programming for iteration
 
@@ -403,7 +403,7 @@ x |> map_dbl(2)
 library(readxl)
 
 # our usual path doesn't work with excel files
-# read_excel("https://proback.github.io/264_fall_2024/Data/gapminder/1952.xlsx")
+# read_excel("https://joeroith.github.io/264_spring_2025/Data/gapminder/1952.xlsx")
 
 # this will work if .xlsx files live in a Data folder that's at the same
 #   level as your .qmd file

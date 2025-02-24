@@ -47,6 +47,7 @@ website:
         - 02_maps.qmd
         - 03_functions.qmd
         - 04_code_quality.qmd
+        - 05_iteration.qmd
 
     - id: projects
       title: "Projects"
