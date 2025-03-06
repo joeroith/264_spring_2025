@@ -76,7 +76,7 @@ for (i in seq_along(df)) {            # 2. sequence
   output[[i]] <- median(df[[i]])      # 3. body
 }
 output
-# use [[.]] even if don't have to to signal working with single elements
+# use [[.]] even if don't have to signal working with single elements
 
 # alternative solution - don't hardcode in "4"
 output <- vector("double", ncol(df))  # 1. output
@@ -329,7 +329,7 @@ df_date |>
   expand_dates()
 ```
 
-Here is default is to summarize all numeric columns, but as with all functions, we can override the default if we choose:
+Here the default is to summarize all numeric columns, but as with all functions, we can override the default if we choose:
 
 ```{r}
 summarize_means <- function(df, summary_vars = where(is.numeric)) {
