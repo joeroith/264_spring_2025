@@ -6,7 +6,7 @@ editor_options:
   chunk_output_type: console
 ---
   
-You can download this .qmd file from [here](https://github.com/proback/264_fall_2024/blob/main/07_apis.qmd).  Just hit the Download Raw File button.
+You can download this .qmd file from [here](https://github.com/joeroith/264_spring_2025/blob/main/07_apis.qmd).  Just hit the Download Raw File button.
 
 Credit to Brianna Heggeseth and Leslie Myint from Macalester College for a few of these descriptions and examples.
 
@@ -37,7 +37,7 @@ For our purposes of obtaining data, APIs exist where website developers make dat
 
 The case studies in this document provide a really quick introduction to data acquisition, just to get you started and show you what's possible.  For more information, these links can be somewhat helpful:
 
-- https://towardsdatascience.com/functions-with-r-and-rvest-a-laymens-guide-acda42325a77
+- https://www.geeksforgeeks.org/functions-with-r-and-rvest/#
 - https://nceas.github.io/oss-lessons/data-liberation/intro-webscraping.html
 
 
@@ -54,8 +54,7 @@ In R, it is easiest to use Web APIs through a **wrapper package**, an R package 
 In particular, `tidycensus` is a wrapper package that makes it easy to obtain desired census information for mapping and modeling:
 
 ```{r}
-#| message: FALSE
-#| echo: FALSE
+#| include = FALSE
 
 # Grab total population and median household income for all
 #   census tracts in MN using Census Bureau API
@@ -93,7 +92,7 @@ ggplot(data = sample_acs_data) +
 
 # The whole state of MN is overwhelming, so focus on a single county
 sample_acs_data |>
-  filter(str_detect(NAME, "Hennepin")) |>
+  filter(str_detect(NAME, "Ramsey")) |>
   ggplot() + 
     geom_sf(aes(fill = median_income), colour = "white", linetype = 2)
 
@@ -136,13 +135,13 @@ You will get the message:
 
 Check your email. Copy and paste your key into a new text file:
 
-- File > New File > Text File (towards the bottom of the menu)
+- (In RStudio) File > New File > Text File (towards the bottom of the menu)
 - Save as `census_api_key.txt` in the same folder as this `.qmd`.
 
 You could then read in the key with code like this:
 
 ```{r}
-#myapikey <- readLines("~/264_fall_2024/DS2_preview_work/census_api_key.txt")
+#myapikey <- readLines("C:/Users/roith1/Documents/R/SDS264/Inclass_264/census_api_key.txt")
 ```
 
 
@@ -156,6 +155,8 @@ One way to store a secret across sessions is with environment variables. Environ
 #| eval: FALSE
 
 file.edit("~/.Renviron")
+
+Sys.setenv(PATH = "path", VAR1 = "value1", VAR2 = "value2")
 ```
 
 The file looks something like
@@ -179,8 +180,8 @@ Another option is to use `Sys.setenv` and `Sys.getenv`:
 ```{r}
 # I used the first line to store my CENSUS API key in .Renviron
 #   after uncommenting - should only need to run one time
-# Sys.setenv("CENSUS_KEY" = "my census api key pasted here")
-# my_census_api_key <- Sys.getenv("CENSUS_KEY")
+# Sys.setenv(CENSUS_API_KEY = "my personal key")
+# my_census_api_key <- Sys.getenv("CENSUS_API_KEY")
 ```
 
 
@@ -265,7 +266,7 @@ head(resp_json_df)
 All right, let's try this!  First we'll grab total population and median household income for all census tracts in MN using 3 approaches
 
 ```{r}
-#| message: FALSE
+#| include: FALSE
 
 # First using tidycenus
 library(tidycensus)
@@ -384,6 +385,8 @@ We will first obtain data about the movie Coco from 2017.
 ```{r}
 #| eval: FALSE
 
+# I used the first line to store my OMDB API key in .Renviron
+# Sys.setenv(OMDB_KEY = "paste my omdb key here")
 myapikey <- Sys.getenv("OMDB_KEY")
 
 # Find url exploring examples at omdbapi.com
@@ -449,6 +452,8 @@ Preliminaries:
 - Check out [API guide](https://www.nps.gov/subjects/developer/guides.htm)
 
 ```{r}
-np_kaggle <- read_csv("~/264_fall_2024/Data/parks.csv")
+#| message: FALSE
+#| eval: FALSE
+np_kaggle <- read_csv("Data/parks.csv")
 ```
 

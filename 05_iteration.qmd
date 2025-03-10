@@ -562,7 +562,7 @@ summary_stats(mtcars,
 
 The following steps can be followed to simulate a power calculation using iteration techniques:
 
-a. generate simulated data where is a true difference or effect
+a. generate simulated data where there is a true difference or effect
 
 b. run your desired test on the simulated data and record if the null hypothesis was rejected or not (i.e. if the p-value was below .05)
 

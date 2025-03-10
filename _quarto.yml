@@ -3,7 +3,6 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
-    - "!07_apis.qmd"
     - "!13_text_analysis.qmd"
     - "!DS2_preview_work/"
     - "!SQLcode/"
@@ -49,6 +48,7 @@ website:
         - 04_code_quality.qmd
         - 05_iteration.qmd
         - 06_data_types.qmd
+        - 07_apis.qmd
 
     - id: projects
       title: "Projects"
