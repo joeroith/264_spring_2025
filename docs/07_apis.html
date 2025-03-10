@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Acquisition with APIs in R</title>
+<title>Data Acquisition with APIs in R – SDS 264: Data Science 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,24 +57,245 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="07_apis_files/libs/clipboard/clipboard.min.js"></script>
-<script src="07_apis_files/libs/quarto-html/quarto.js"></script>
-<script src="07_apis_files/libs/quarto-html/popper.min.js"></script>
-<script src="07_apis_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="07_apis_files/libs/quarto-html/anchor.min.js"></script>
-<link href="07_apis_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="07_apis_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="07_apis_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="07_apis_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="07_apis_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="fullcontent">
+<body class="nav-sidebar floating nav-fixed">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">SDS 264: Data Science 2</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tech-notes" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tech Notes</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tech-notes">    
+        <li>
+    <a class="dropdown-item" href="./tech_setup.html">
+ <span class="dropdown-text">Tech Setup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./why_quarto.html">
+ <span class="dropdown-text">Why Quarto?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./github_intro.html">
+ <span class="dropdown-text">Intro to GitHub</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./github_links.html">
+ <span class="dropdown-text">GitHub Links</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-activities" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Activities</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-activities">    
+        <li>
+    <a class="dropdown-item" href="./01_review164.html">
+ <span class="dropdown-text">Review of Data Science 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./02_maps.html">
+ <span class="dropdown-text">Creating informative maps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./03_functions.html">
+ <span class="dropdown-text">Functions and tidy evaluation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./04_code_quality.html">
+ <span class="dropdown-text">Code quality</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./05_iteration.html">
+ <span class="dropdown-text">Iteration</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./06_data_types.html">
+ <span class="dropdown-text">Data types</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./07_apis.html">
+ <span class="dropdown-text">Data Acquisition with APIs in R</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="./miniproject1.html">
+ <span class="dropdown-text">Mini-Project 1: Maps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./miniproject2.html">
+ <span class="dropdown-text">Mini-Project 2: Data Acquisition</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./rtipoftheday.html"> 
+<span class="menu-text">R Tip of the Day</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07_apis.html">Data Acquisition with APIs in R</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_review164.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Review of Data Science 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating informative maps</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions and tidy evaluation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_code_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code quality</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_iteration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Iteration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_data_types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data types</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_apis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Data Acquisition with APIs in R</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#getting-data-from-websites" id="toc-getting-data-from-websites" class="nav-link active" data-scroll-target="#getting-data-from-websites">Getting data from websites</a></li>
+  <li><a href="#option-1-apis" id="toc-option-1-apis" class="nav-link" data-scroll-target="#option-1-apis">Option 1: APIs</a>
+  <ul class="collapse">
+  <li><a href="#wrapper-packages" id="toc-wrapper-packages" class="nav-link" data-scroll-target="#wrapper-packages">Wrapper packages</a></li>
+  <li><a href="#accessing-web-apis-directly" id="toc-accessing-web-apis-directly" class="nav-link" data-scroll-target="#accessing-web-apis-directly">Accessing web APIs directly</a>
+  <ul class="collapse">
+  <li><a href="#getting-a-census-api-key" id="toc-getting-a-census-api-key" class="nav-link" data-scroll-target="#getting-a-census-api-key">Getting a Census API key</a></li>
+  <li><a href="#handling-api-keys" id="toc-handling-api-keys" class="nav-link" data-scroll-target="#handling-api-keys">Handling API keys</a></li>
+  <li><a href="#navigating-api-documentation" id="toc-navigating-api-documentation" class="nav-link" data-scroll-target="#navigating-api-documentation">Navigating API documentation</a></li>
+  <li><a href="#on-your-own" id="toc-on-your-own" class="nav-link" data-scroll-target="#on-your-own">On Your Own</a></li>
+  <li><a href="#one-more-example-using-an-api-key" id="toc-one-more-example-using-an-api-key" class="nav-link" data-scroll-target="#one-more-example-using-an-api-key">One more example using an API key</a></li>
+  <li><a href="#on-your-own-continued" id="toc-on-your-own-continued" class="nav-link" data-scroll-target="#on-your-own-continued">On Your Own (continued)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -710,12 +931,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>np_kaggle <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Data/parks.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+
+
 </section>
 </section>
 </section>
 
-</main>
-<!-- /main column -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1137,6 +1359,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Joe Roith, 2025<br> All content licensed under <img src="https://static.thenounproject.com/png/70967-200.png" height="20"> (<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>)</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Site built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
 
 
 
