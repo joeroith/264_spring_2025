@@ -71,7 +71,7 @@ sample_acs_data <- tidycensus::get_acs(
 
 Obtaining raw data from the Census Bureau was that easy!  Often we will have to obtain and use a secret API key to access the data, but that's not always necessary with `tidycensus`.
 
-Now we can tidy that data and produce plots and analyses.
+Now we can tidy that data and produce plots and analyses. [Here's a decent place to get more information about the variable codes.](https://api.census.gov/data/2019/acs/acs5/variables.html)
 
 ```{r}
 #| warning: FALSE
