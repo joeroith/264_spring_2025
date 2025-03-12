@@ -6,7 +6,7 @@ editor_options:
   chunk_output_type: console
 ---
   
-You can download this .qmd file from [here](https://github.com/proback/264_fall_2024/blob/main/09_web_scraping.qmd).  Just hit the Download Raw File button.
+You can download this .qmd file from [here](https://github.com/joeroith/264_spring_2025/blob/main/09_web_scraping.qmd).  Just hit the Download Raw File button.
 
 Credit to Brianna Heggeseth and Leslie Myint from Macalester College for a few of these descriptions and examples.
 

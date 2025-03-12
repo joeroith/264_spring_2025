@@ -105,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -162,6 +162,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="./02_maps.html">
  <span class="dropdown-text">Creating informative maps</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./03_functions.html">
+ <span class="dropdown-text">Functions and tidy evaluation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./04_code_quality.html">
+ <span class="dropdown-text">Code quality</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./05_iteration.html">
+ <span class="dropdown-text">Iteration</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./06_data_types.html">
+ <span class="dropdown-text">Data types</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./07_apis.html">
+ <span class="dropdown-text">Data Acquisition with APIs in R</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./08_table_scraping.html">
+ <span class="dropdown-text">Table Scraping in R</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./09_web_scraping.html">
+ <span class="dropdown-text">Web Scraping in R</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -172,6 +200,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li>
     <a class="dropdown-item" href="./miniproject1.html">
  <span class="dropdown-text">Mini-Project 1: Maps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./miniproject2.html">
+ <span class="dropdown-text">Mini-Project 2: Data Acquisition</span></a>
   </li>  
     </ul>
   </li>
@@ -185,10 +217,81 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./09_web_scraping.html">Web Scraping in R</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_review164.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Review of Data Science 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating informative maps</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions and tidy evaluation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_code_quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code quality</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_iteration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Iteration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_data_types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data types</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_apis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Acquisition with APIs in R</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_table_scraping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Table Scraping in R</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_web_scraping.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Web Scraping in R</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -241,7 +344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>You can download this .qmd file from <a href="https://github.com/proback/264_fall_2024/blob/main/09_web_scraping.qmd">here</a>. Just hit the Download Raw File button.</p>
+<p>You can download this .qmd file from <a href="https://github.com/joeroith/264_spring_2025/blob/main/09_web_scraping.qmd">here</a>. Just hit the Download Raw File button.</p>
 <p>Credit to Brianna Heggeseth and Leslie Myint from Macalester College for a few of these descriptions and examples.</p>
 <section id="using-rvest-for-web-scraping" class="level1">
 <h1>Using rvest for web scraping</h1>
@@ -366,16 +469,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>title_temp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{xml_nodeset (10)}
- [1] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/excess-weig ...
- [2] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-lead-im ...
- [3] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/contact-len ...
- [4] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-funded- ...
- [5] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-researc ...
- [6] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/aging-may-c ...
- [7] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-officia ...
- [8] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/behavioral- ...
- [9] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/brain-struc ...
-[10] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/reported-us ...</code></pre>
+ [1] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-central ...
+ [2] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-funded- ...
+ [3] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/longer-brea ...
+ [4] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/omalizumab- ...
+ [5] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/new-4d-brai ...
+ [6] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-funded- ...
+ [7] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/single-dose ...
+ [8] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-study-f ...
+ [9] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/influenza-v ...
+[10] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/therapy-hel ...</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Extract content from nodes with html_text(), html_name(), </span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#    html_attrs(), html_children(), html_table(), etc.</span></span>
@@ -383,16 +486,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>title_vec <span class="ot">&lt;-</span> <span class="fu">html_text</span>(title_temp)</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>title_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "Excess weight gain in first trimester associated with fetal fat accumulation"                                             
- [2] "NIH to lead implementation of National Plan to End Parkinson’s Act"                                                       
- [3] "Contact lenses used to slow nearsightedness in youth have a lasting effect"                                               
- [4] "NIH-funded study finds cases of ME/CFS increase following SARS-CoV-2"                                                     
- [5] "NIH researchers discover novel class of anti-malaria antibodies"                                                          
- [6] "Aging may change some brain cells more than others"                                                                       
- [7] "NIH officials assess threat of H5N1"                                                                                      
- [8] "Behavioral intervention decreases how much pain affects daily activities in people with dialysis-dependent kidney failure"
- [9] "Brain structure differences are associated with early use of substances among adolescents"                                
-[10] "Reported use of most drugs among adolescents remained low in 2024"                                                        </code></pre>
+<pre><code> [1] "NIH centralizes peer review to improve efficiency and strengthen integrity "                   
+ [2] "NIH-funded research team engineers new drug targeting pain sensation pathway"                  
+ [3] "Longer breastfeeding linked to blood-pressure lowering effects of certain infant gut bacteria "
+ [4] "Omalizumab treats multi-food allergy better than oral immunotherapy"                           
+ [5] "New 4D Brain Map reveals potential early warning signs of multiple sclerosis "                 
+ [6] "NIH-funded clinical trial will evaluate new dengue therapeutic"                                
+ [7] "Single dose of broadly neutralizing antibody protects macaques from H5N1 influenza"            
+ [8] "NIH study finds infection-related hospitalizations linked to increased risk of heart failure"  
+ [9] "Influenza A viruses adapt shape in response to environmental pressures"                        
+[10] "Therapy helps peanut-allergic kids tolerate tablespoons of peanut butter"                      </code></pre>
 </div>
 </div>
 <p>You can also write this altogether with a pipe:</p>
@@ -409,16 +512,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">".teaser-title"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "Excess weight gain in first trimester associated with fetal fat accumulation"                                             
- [2] "NIH to lead implementation of National Plan to End Parkinson’s Act"                                                       
- [3] "Contact lenses used to slow nearsightedness in youth have a lasting effect"                                               
- [4] "NIH-funded study finds cases of ME/CFS increase following SARS-CoV-2"                                                     
- [5] "NIH researchers discover novel class of anti-malaria antibodies"                                                          
- [6] "Aging may change some brain cells more than others"                                                                       
- [7] "NIH officials assess threat of H5N1"                                                                                      
- [8] "Behavioral intervention decreases how much pain affects daily activities in people with dialysis-dependent kidney failure"
- [9] "Brain structure differences are associated with early use of substances among adolescents"                                
-[10] "Reported use of most drugs among adolescents remained low in 2024"                                                        </code></pre>
+<pre><code> [1] "NIH centralizes peer review to improve efficiency and strengthen integrity "                   
+ [2] "NIH-funded research team engineers new drug targeting pain sensation pathway"                  
+ [3] "Longer breastfeeding linked to blood-pressure lowering effects of certain infant gut bacteria "
+ [4] "Omalizumab treats multi-food allergy better than oral immunotherapy"                           
+ [5] "New 4D Brain Map reveals potential early warning signs of multiple sclerosis "                 
+ [6] "NIH-funded clinical trial will evaluate new dengue therapeutic"                                
+ [7] "Single dose of broadly neutralizing antibody protects macaques from H5N1 influenza"            
+ [8] "NIH study finds infection-related hospitalizations linked to increased risk of heart failure"  
+ [9] "Influenza A viruses adapt shape in response to environmental pressures"                        
+[10] "Therapy helps peanut-allergic kids tolerate tablespoons of peanut butter"                      </code></pre>
 </div>
 </div>
 <p>And finally we wrap the 4 steps above into the <code>bow</code> and <code>scrape</code> functions from the <code>polite</code> package:</p>
@@ -430,16 +533,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>nih_title</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "Excess weight gain in first trimester associated with fetal fat accumulation"                                             
- [2] "NIH to lead implementation of National Plan to End Parkinson’s Act"                                                       
- [3] "Contact lenses used to slow nearsightedness in youth have a lasting effect"                                               
- [4] "NIH-funded study finds cases of ME/CFS increase following SARS-CoV-2"                                                     
- [5] "NIH researchers discover novel class of anti-malaria antibodies"                                                          
- [6] "Aging may change some brain cells more than others"                                                                       
- [7] "NIH officials assess threat of H5N1"                                                                                      
- [8] "Behavioral intervention decreases how much pain affects daily activities in people with dialysis-dependent kidney failure"
- [9] "Brain structure differences are associated with early use of substances among adolescents"                                
-[10] "Reported use of most drugs among adolescents remained low in 2024"                                                        </code></pre>
+<pre><code> [1] "NIH centralizes peer review to improve efficiency and strengthen integrity "                   
+ [2] "NIH-funded research team engineers new drug targeting pain sensation pathway"                  
+ [3] "Longer breastfeeding linked to blood-pressure lowering effects of certain infant gut bacteria "
+ [4] "Omalizumab treats multi-food allergy better than oral immunotherapy"                           
+ [5] "New 4D Brain Map reveals potential early warning signs of multiple sclerosis "                 
+ [6] "NIH-funded clinical trial will evaluate new dengue therapeutic"                                
+ [7] "Single dose of broadly neutralizing antibody protects macaques from H5N1 influenza"            
+ [8] "NIH study finds infection-related hospitalizations linked to increased risk of heart failure"  
+ [9] "Influenza A viruses adapt shape in response to environmental pressures"                        
+[10] "Therapy helps peanut-allergic kids tolerate tablespoons of peanut butter"                      </code></pre>
 </div>
 </div>
 </section>
@@ -452,26 +555,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>nih_pubdate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "January 17, 2025"  "January 17, 2025"  "January 16, 2025" 
- [4] "January 13, 2025"  "January 3, 2025"   "January 2, 2025"  
- [7] "December 31, 2024" "December 30, 2024" "December 30, 2024"
-[10] "December 17, 2024"</code></pre>
+<pre><code> [1] "March 6, 2025"     "March 5, 2025"     "March 4, 2025"    
+ [4] "March 3, 2025"     "February 27, 2025" "February 11, 2025"
+ [7] "February 11, 2025" "February 11, 2025" "February 10, 2025"
+[10] "February 10, 2025"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>nih_description <span class="ot">&lt;-</span> <span class="fu">scrape</span>(session) <span class="sc">|&gt;</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">".teaser-description"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>nih_description</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "January 17, 2025 —     \n          Findings from NIH study suggest early intervention may prevent adult obesity associated with heavier birthweight. "                                                 
- [2] "January 17, 2025 —     \n          Open call for participants to serve on Parkinson’s Advisory Council. "                                                                                              
- [3] "January 16, 2025 —     \n          NIH-funded study finds progression of eye growth returns to normal in older teens, with no loss of treatment benefit. "                                             
- [4] "January 13, 2025 —     \n          ME/CFS is a complex, serious, and chronic condition that often occurs following an infection. "                                                                     
- [5] "January 3, 2025 —     \n          New antibodies could lead to next generation of interventions against malaria. "                                                                                     
- [6] "January 2, 2025 —     \n          NIH-funded mouse study provides roadmap for how aging may alter brain cell genetic activity. "                                                                       
- [7] "December 31, 2024 —     \n          Balancing enhanced vigilance and “business as usual.” "                                                                                                            
- [8] "December 30, 2024 —     \n          NIH-funded study shows benefits of pain coping skills training in population with limited pain treatment options. "                                                
- [9] "December 30, 2024 —     \n          Many differences appeared to exist prior to any substance use, pointing to the role brain structure may play in substance use risk, NIH-supported study suggests. "
-[10] "December 17, 2024 —     \n          New NIH-funded data show lower use of most substances continues following the COVID-19 pandemic. "                                                                 </code></pre>
+<pre><code> [1] "March 6, 2025 —     \n          The proposed approach is expected to save more than $65 million annually. "                                                  
+ [2] "March 5, 2025 —     \n          Study of CB1 receptor has implications for chronic pain treatment. "                                                         
+ [3] "March 4, 2025 —     \n          Nursing for at least six months may spur beneficial gut bacteria connected to better heart health years later. "             
+ [4] "March 3, 2025 —     \n          High rate of oral immunotherapy side effects in NIH trial explains superiority of omalizumab. "                              
+ [5] "February 27, 2025 —     \n          NIH study reveals key players underlying disease onset and repair. "                                                     
+ [6] "February 11, 2025 —     \n          Dengue virus sickens as many as 400 million people each year, primarily in tropical and subtropical parts of the world. "
+ [7] "February 11, 2025 —     \n          NIH science lays groundwork for future studies in people. "                                                              
+ [8] "February 11, 2025 —     \n          Findings highlight the importance of infection prevention measures and personalized heart failure care. "                
+ [9] "February 10, 2025 —     \n          NIH study identifies previously unknown adaptation. "                                                                    
+[10] "February 10, 2025 —     \n          NIH trial informs potential treatment strategy for kids who already tolerate half a peanut or more. "                    </code></pre>
 </div>
 </div>
 <p>Combine these extracted variables into a single tibble. Make sure the variables are formatted correctly - e.g.&nbsp;<code>pubdate</code> has <code>date</code> type, <code>description</code> does not contain the <code>pubdate</code>, etc.</p>
@@ -485,16 +588,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 10 × 3
    title                                                     pubdate description
    &lt;chr&gt;                                                     &lt;chr&gt;   &lt;chr&gt;      
- 1 Excess weight gain in first trimester associated with fe… Januar… "January 1…
- 2 NIH to lead implementation of National Plan to End Parki… Januar… "January 1…
- 3 Contact lenses used to slow nearsightedness in youth hav… Januar… "January 1…
- 4 NIH-funded study finds cases of ME/CFS increase followin… Januar… "January 1…
- 5 NIH researchers discover novel class of anti-malaria ant… Januar… "January 3…
- 6 Aging may change some brain cells more than others        Januar… "January 2…
- 7 NIH officials assess threat of H5N1                       Decemb… "December …
- 8 Behavioral intervention decreases how much pain affects … Decemb… "December …
- 9 Brain structure differences are associated with early us… Decemb… "December …
-10 Reported use of most drugs among adolescents remained lo… Decemb… "December …</code></pre>
+ 1 "NIH centralizes peer review to improve efficiency and s… March … "March 6, …
+ 2 "NIH-funded research team engineers new drug targeting p… March … "March 5, …
+ 3 "Longer breastfeeding linked to blood-pressure lowering … March … "March 4, …
+ 4 "Omalizumab treats multi-food allergy better than oral i… March … "March 3, …
+ 5 "New 4D Brain Map reveals potential early warning signs … Februa… "February …
+ 6 "NIH-funded clinical trial will evaluate new dengue ther… Februa… "February …
+ 7 "Single dose of broadly neutralizing antibody protects m… Februa… "February …
+ 8 "NIH study finds infection-related hospitalizations link… Februa… "February …
+ 9 "Influenza A viruses adapt shape in response to environm… Februa… "February …
+10 "Therapy helps peanut-allergic kids tolerate tablespoons… Februa… "February …</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># now clean the data</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>nih_top10 <span class="ot">&lt;-</span> nih_top10 <span class="sc">|&gt;</span></span>
@@ -505,16 +608,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 10 × 3
    title                                                  pubdate    description
    &lt;chr&gt;                                                  &lt;date&gt;     &lt;chr&gt;      
- 1 Excess weight gain in first trimester associated with… 2025-01-17 Findings f…
- 2 NIH to lead implementation of National Plan to End Pa… 2025-01-17 Open call …
- 3 Contact lenses used to slow nearsightedness in youth … 2025-01-16 NIH-funded…
- 4 NIH-funded study finds cases of ME/CFS increase follo… 2025-01-13 ME/CFS is …
- 5 NIH researchers discover novel class of anti-malaria … 2025-01-03 New antibo…
- 6 Aging may change some brain cells more than others     2025-01-02 NIH-funded…
- 7 NIH officials assess threat of H5N1                    2024-12-31 Balancing …
- 8 Behavioral intervention decreases how much pain affec… 2024-12-30 NIH-funded…
- 9 Brain structure differences are associated with early… 2024-12-30 Many diffe…
-10 Reported use of most drugs among adolescents remained… 2024-12-17 New NIH-fu…</code></pre>
+ 1 "NIH centralizes peer review to improve efficiency an… 2025-03-06 The propos…
+ 2 "NIH-funded research team engineers new drug targetin… 2025-03-05 Study of C…
+ 3 "Longer breastfeeding linked to blood-pressure loweri… 2025-03-04 Nursing fo…
+ 4 "Omalizumab treats multi-food allergy better than ora… 2025-03-03 High rate …
+ 5 "New 4D Brain Map reveals potential early warning sig… 2025-02-27 NIH study …
+ 6 "NIH-funded clinical trial will evaluate new dengue t… 2025-02-11 Dengue vir…
+ 7 "Single dose of broadly neutralizing antibody protect… 2025-02-11 NIH scienc…
+ 8 "NIH study finds infection-related hospitalizations l… 2025-02-11 Findings h…
+ 9 "Influenza A viruses adapt shape in response to envir… 2025-02-10 NIH study …
+10 "Therapy helps peanut-allergic kids tolerate tablespo… 2025-02-10 NIH trial …</code></pre>
 </div>
 </div>
 <p>NOW - continue this process to build a tibble with the most recent 50 NIH news releases, which will require that you iterate over 5 webpages! You should write at least one function, and you will need iteration–use both a <code>for</code> loop and appropriate <code>map_()</code> functions from <code>purrr</code>. Some additional hints:</p>
