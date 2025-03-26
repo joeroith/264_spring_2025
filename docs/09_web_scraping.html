@@ -205,6 +205,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="./miniproject2.html">
  <span class="dropdown-text">Mini-Project 2: Data Acquisition</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./miniproject3.html">
+ <span class="dropdown-text">Mini-Project 3: Building a Personal Quarto Webpage</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -469,16 +473,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>title_temp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{xml_nodeset (10)}
- [1] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-funded- ...
- [2] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/surgery-kid ...
- [3] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-sponsor ...
- [4] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/topical-ste ...
- [5] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/tecovirimat ...
- [6] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-central ...
- [7] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-funded- ...
- [8] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/longer-brea ...
- [9] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/omalizumab- ...
-[10] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/new-4d-brai ...</code></pre>
+ [1] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/daily-physi ...
+ [2] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-researc ...
+ [3] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/study-illum ...
+ [4] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-funded- ...
+ [5] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/surgery-kid ...
+ [6] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-sponsor ...
+ [7] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/topical-ste ...
+ [8] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/tecovirimat ...
+ [9] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-central ...
+[10] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-funded- ...</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Extract content from nodes with html_text(), html_name(), </span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#    html_attrs(), html_children(), html_table(), etc.</span></span>
@@ -486,16 +490,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>title_vec <span class="ot">&lt;-</span> <span class="fu">html_text</span>(title_temp)</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>title_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "NIH-funded study identifies potential new stroke treatment"                                    
- [2] "Surgery in kids with mild sleep-disordered breathing tied to fewer doctor visits, meds"        
- [3] "NIH-sponsored trial of Lassa vaccine opens"                                                    
- [4] "Topical steroid withdrawal diagnostic criteria defined by NIH researchers"                     
- [5] "Tecovirimat is safe but ineffective as treatment for clade II mpox"                            
- [6] "NIH centralizes peer review to improve efficiency and strengthen integrity "                   
- [7] "NIH-funded research team engineers new drug targeting pain sensation pathway"                  
- [8] "Longer breastfeeding linked to blood-pressure lowering effects of certain infant gut bacteria "
- [9] "Omalizumab treats multi-food allergy better than oral immunotherapy"                           
-[10] "New 4D Brain Map reveals potential early warning signs of multiple sclerosis "                 </code></pre>
+<pre><code> [1] "Daily physical activity, even at light intensities, linked to lower cancer risk"                 
+ [2] "NIH researchers develop eye drops that slow vision loss in animals"                              
+ [3] "Study illuminates the structural features of memory formation at cellular and subcellular levels"
+ [4] "NIH-funded study identifies potential new stroke treatment"                                      
+ [5] "Surgery in kids with mild sleep-disordered breathing tied to fewer doctor visits, meds"          
+ [6] "NIH-sponsored trial of Lassa vaccine opens"                                                      
+ [7] "Topical steroid withdrawal diagnostic criteria defined by NIH researchers"                       
+ [8] "Tecovirimat is safe but ineffective as treatment for clade II mpox"                              
+ [9] "NIH centralizes peer review to improve efficiency and strengthen integrity "                     
+[10] "NIH-funded research team engineers new drug targeting pain sensation pathway"                    </code></pre>
 </div>
 </div>
 <p>You can also write this altogether with a pipe:</p>
@@ -512,16 +516,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">".teaser-title"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "NIH-funded study identifies potential new stroke treatment"                                    
- [2] "Surgery in kids with mild sleep-disordered breathing tied to fewer doctor visits, meds"        
- [3] "NIH-sponsored trial of Lassa vaccine opens"                                                    
- [4] "Topical steroid withdrawal diagnostic criteria defined by NIH researchers"                     
- [5] "Tecovirimat is safe but ineffective as treatment for clade II mpox"                            
- [6] "NIH centralizes peer review to improve efficiency and strengthen integrity "                   
- [7] "NIH-funded research team engineers new drug targeting pain sensation pathway"                  
- [8] "Longer breastfeeding linked to blood-pressure lowering effects of certain infant gut bacteria "
- [9] "Omalizumab treats multi-food allergy better than oral immunotherapy"                           
-[10] "New 4D Brain Map reveals potential early warning signs of multiple sclerosis "                 </code></pre>
+<pre><code> [1] "Daily physical activity, even at light intensities, linked to lower cancer risk"                 
+ [2] "NIH researchers develop eye drops that slow vision loss in animals"                              
+ [3] "Study illuminates the structural features of memory formation at cellular and subcellular levels"
+ [4] "NIH-funded study identifies potential new stroke treatment"                                      
+ [5] "Surgery in kids with mild sleep-disordered breathing tied to fewer doctor visits, meds"          
+ [6] "NIH-sponsored trial of Lassa vaccine opens"                                                      
+ [7] "Topical steroid withdrawal diagnostic criteria defined by NIH researchers"                       
+ [8] "Tecovirimat is safe but ineffective as treatment for clade II mpox"                              
+ [9] "NIH centralizes peer review to improve efficiency and strengthen integrity "                     
+[10] "NIH-funded research team engineers new drug targeting pain sensation pathway"                    </code></pre>
 </div>
 </div>
 <p>And finally we wrap the 4 steps above into the <code>bow</code> and <code>scrape</code> functions from the <code>polite</code> package:</p>
@@ -533,16 +537,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>nih_title</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "NIH-funded study identifies potential new stroke treatment"                                    
- [2] "Surgery in kids with mild sleep-disordered breathing tied to fewer doctor visits, meds"        
- [3] "NIH-sponsored trial of Lassa vaccine opens"                                                    
- [4] "Topical steroid withdrawal diagnostic criteria defined by NIH researchers"                     
- [5] "Tecovirimat is safe but ineffective as treatment for clade II mpox"                            
- [6] "NIH centralizes peer review to improve efficiency and strengthen integrity "                   
- [7] "NIH-funded research team engineers new drug targeting pain sensation pathway"                  
- [8] "Longer breastfeeding linked to blood-pressure lowering effects of certain infant gut bacteria "
- [9] "Omalizumab treats multi-food allergy better than oral immunotherapy"                           
-[10] "New 4D Brain Map reveals potential early warning signs of multiple sclerosis "                 </code></pre>
+<pre><code> [1] "Daily physical activity, even at light intensities, linked to lower cancer risk"                 
+ [2] "NIH researchers develop eye drops that slow vision loss in animals"                              
+ [3] "Study illuminates the structural features of memory formation at cellular and subcellular levels"
+ [4] "NIH-funded study identifies potential new stroke treatment"                                      
+ [5] "Surgery in kids with mild sleep-disordered breathing tied to fewer doctor visits, meds"          
+ [6] "NIH-sponsored trial of Lassa vaccine opens"                                                      
+ [7] "Topical steroid withdrawal diagnostic criteria defined by NIH researchers"                       
+ [8] "Tecovirimat is safe but ineffective as treatment for clade II mpox"                              
+ [9] "NIH centralizes peer review to improve efficiency and strengthen integrity "                     
+[10] "NIH-funded research team engineers new drug targeting pain sensation pathway"                    </code></pre>
 </div>
 </div>
 </section>
@@ -555,26 +559,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>nih_pubdate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "March 17, 2025"    "March 17, 2025"    "March 17, 2025"   
- [4] "March 14, 2025"    "March 12, 2025"    "March 6, 2025"    
- [7] "March 5, 2025"     "March 4, 2025"     "March 3, 2025"    
-[10] "February 27, 2025"</code></pre>
+<pre><code> [1] "March 26, 2025" "March 21, 2025" "March 20, 2025" "March 17, 2025"
+ [5] "March 17, 2025" "March 17, 2025" "March 14, 2025" "March 12, 2025"
+ [9] "March 6, 2025"  "March 5, 2025" </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>nih_description <span class="ot">&lt;-</span> <span class="fu">scrape</span>(session) <span class="sc">|&gt;</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">".teaser-description"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>nih_description</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "March 17, 2025 —     \n          Preclinical study in rodents suggests that uric acid is ready for human clinical testing. "                    
- [2] "March 17, 2025 —     \n          NIH-funded study supports use of adenotonsillectomy in this at-risk patient group.\r\n\r\n "                   
- [3] "March 17, 2025 —     \n          Lassa fever is a viral hemorrhagic disease that can be fatal and that causes permanent hearing loss. "         
- [4] "March 14, 2025 —     \n          Criteria may help guide treatment of dermatitis. "                                                             
- [5] "March 12, 2025 —     \n          NIH-sponsored trial data offer further evidence to help inform mpox treatment decisions.\r\n\r\n "             
- [6] "March 6, 2025 —     \n          The proposed approach is expected to save more than $65 million annually. "                                     
- [7] "March 5, 2025 —     \n          Study of CB1 receptor has implications for chronic pain treatment. "                                            
- [8] "March 4, 2025 —     \n          Nursing for at least six months may spur beneficial gut bacteria connected to better heart health years later. "
- [9] "March 3, 2025 —     \n          High rate of oral immunotherapy side effects in NIH trial explains superiority of omalizumab. "                 
-[10] "February 27, 2025 —     \n          NIH study reveals key players underlying disease onset and repair. "                                        </code></pre>
+<pre><code> [1] "March 26, 2025 —     \n          NIH study finds number of steps taken daily may be more important for cancer risk than the intensity of activity. "               
+ [2] "March 21, 2025 —     \n          Treatment shows potential to slow the progression of human degenerative eye diseases, including retinitis pigmentosa.\r\n\r\n "   
+ [3] "March 20, 2025 —     \n          NIH-funded study uses cutting-edge imaging techniques to reconstruct features underlying learning and memory in the mouse brain. "
+ [4] "March 17, 2025 —     \n          Preclinical study in rodents suggests that uric acid is ready for human clinical testing. "                                       
+ [5] "March 17, 2025 —     \n          NIH-funded study supports use of adenotonsillectomy in this at-risk patient group.\r\n\r\n "                                      
+ [6] "March 17, 2025 —     \n          Lassa fever is a viral hemorrhagic disease that can be fatal and that causes permanent hearing loss. "                            
+ [7] "March 14, 2025 —     \n          Criteria may help guide treatment of dermatitis. "                                                                                
+ [8] "March 12, 2025 —     \n          NIH-sponsored trial data offer further evidence to help inform mpox treatment decisions.\r\n\r\n "                                
+ [9] "March 6, 2025 —     \n          The proposed approach is expected to save more than $65 million annually. "                                                        
+[10] "March 5, 2025 —     \n          Study of CB1 receptor has implications for chronic pain treatment. "                                                               </code></pre>
 </div>
 </div>
 <p>Combine these extracted variables into a single tibble. Make sure the variables are formatted correctly - e.g.&nbsp;<code>pubdate</code> has <code>date</code> type, <code>description</code> does not contain the <code>pubdate</code>, etc.</p>
@@ -588,16 +591,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 10 × 3
    title                                                     pubdate description
    &lt;chr&gt;                                                     &lt;chr&gt;   &lt;chr&gt;      
- 1 "NIH-funded study identifies potential new stroke treatm… March … "March 17,…
- 2 "Surgery in kids with mild sleep-disordered breathing ti… March … "March 17,…
- 3 "NIH-sponsored trial of Lassa vaccine opens"              March … "March 17,…
- 4 "Topical steroid withdrawal diagnostic criteria defined … March … "March 14,…
- 5 "Tecovirimat is safe but ineffective as treatment for cl… March … "March 12,…
- 6 "NIH centralizes peer review to improve efficiency and s… March … "March 6, …
- 7 "NIH-funded research team engineers new drug targeting p… March … "March 5, …
- 8 "Longer breastfeeding linked to blood-pressure lowering … March … "March 4, …
- 9 "Omalizumab treats multi-food allergy better than oral i… March … "March 3, …
-10 "New 4D Brain Map reveals potential early warning signs … Februa… "February …</code></pre>
+ 1 "Daily physical activity, even at light intensities, lin… March … "March 26,…
+ 2 "NIH researchers develop eye drops that slow vision loss… March … "March 21,…
+ 3 "Study illuminates the structural features of memory for… March … "March 20,…
+ 4 "NIH-funded study identifies potential new stroke treatm… March … "March 17,…
+ 5 "Surgery in kids with mild sleep-disordered breathing ti… March … "March 17,…
+ 6 "NIH-sponsored trial of Lassa vaccine opens"              March … "March 17,…
+ 7 "Topical steroid withdrawal diagnostic criteria defined … March … "March 14,…
+ 8 "Tecovirimat is safe but ineffective as treatment for cl… March … "March 12,…
+ 9 "NIH centralizes peer review to improve efficiency and s… March … "March 6, …
+10 "NIH-funded research team engineers new drug targeting p… March … "March 5, …</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># now clean the data</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>nih_top10 <span class="ot">&lt;-</span> nih_top10 <span class="sc">|&gt;</span></span>
@@ -608,16 +611,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 10 × 3
    title                                                  pubdate    description
    &lt;chr&gt;                                                  &lt;date&gt;     &lt;chr&gt;      
- 1 "NIH-funded study identifies potential new stroke tre… 2025-03-17 Preclinica…
- 2 "Surgery in kids with mild sleep-disordered breathing… 2025-03-17 NIH-funded…
- 3 "NIH-sponsored trial of Lassa vaccine opens"           2025-03-17 Lassa feve…
- 4 "Topical steroid withdrawal diagnostic criteria defin… 2025-03-14 Criteria m…
- 5 "Tecovirimat is safe but ineffective as treatment for… 2025-03-12 NIH-sponso…
- 6 "NIH centralizes peer review to improve efficiency an… 2025-03-06 The propos…
- 7 "NIH-funded research team engineers new drug targetin… 2025-03-05 Study of C…
- 8 "Longer breastfeeding linked to blood-pressure loweri… 2025-03-04 Nursing fo…
- 9 "Omalizumab treats multi-food allergy better than ora… 2025-03-03 High rate …
-10 "New 4D Brain Map reveals potential early warning sig… 2025-02-27 NIH study …</code></pre>
+ 1 "Daily physical activity, even at light intensities, … 2025-03-26 NIH study …
+ 2 "NIH researchers develop eye drops that slow vision l… 2025-03-21 Treatment …
+ 3 "Study illuminates the structural features of memory … 2025-03-20 NIH-funded…
+ 4 "NIH-funded study identifies potential new stroke tre… 2025-03-17 Preclinica…
+ 5 "Surgery in kids with mild sleep-disordered breathing… 2025-03-17 NIH-funded…
+ 6 "NIH-sponsored trial of Lassa vaccine opens"           2025-03-17 Lassa feve…
+ 7 "Topical steroid withdrawal diagnostic criteria defin… 2025-03-14 Criteria m…
+ 8 "Tecovirimat is safe but ineffective as treatment for… 2025-03-12 NIH-sponso…
+ 9 "NIH centralizes peer review to improve efficiency an… 2025-03-06 The propos…
+10 "NIH-funded research team engineers new drug targetin… 2025-03-05 Study of C…</code></pre>
 </div>
 </div>
 <p>NOW - continue this process to build a tibble with the most recent 50 NIH news releases, which will require that you iterate over 5 webpages! You should write at least one function, and you will need iteration–use both a <code>for</code> loop and appropriate <code>map_()</code> functions from <code>purrr</code>. Some additional hints:</p>
@@ -630,38 +633,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Helper function to reduce html_nodes() |&gt; html_text() code duplication</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>get_text_from_page <span class="ot">&lt;-</span> <span class="cf">function</span>(page, css_selector) {</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  ???</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Main function to scrape and tidy desired attributes</span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>scrape_page <span class="ot">&lt;-</span> <span class="cf">function</span>(url) {</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    page <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url)</span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    article_titles <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(???)</span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    article_dates <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(???)</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    article_dates <span class="ot">&lt;-</span> <span class="fu">mdy</span>(article_dates)</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>    article_description <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(???)</span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    article_description <span class="ot">&lt;-</span> <span class="fu">str_trim</span>(<span class="fu">str_replace</span>(article_description, </span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">".*</span><span class="sc">\\</span><span class="st">n"</span>, </span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">""</span>)</span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>                                    )</span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(</span>
-<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>      ???</span>
-<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  page <span class="sc">|&gt;</span> </span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">html_nodes</span>(css_selector) <span class="sc">|&gt;</span> </span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">html_text</span>()</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Main function to scrape and tidy desired attributes</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>scrape_page <span class="ot">&lt;-</span> <span class="cf">function</span>(url) {</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    page <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url)</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    article_titles <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(page, <span class="st">".teaser-title"</span>)</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>    article_dates <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(page, <span class="st">".date-display-single"</span>)</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    article_dates <span class="ot">&lt;-</span> <span class="fu">mdy</span>(article_dates)</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>    article_description <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(page, <span class="st">".teaser-description"</span>)</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    article_description <span class="ot">&lt;-</span> <span class="fu">str_trim</span>(<span class="fu">str_replace</span>(article_description, </span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">".*</span><span class="sc">\\</span><span class="st">n"</span>, </span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">""</span>)</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>                                    )</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> article_titles, </span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">pubdate =</span> article_dates, </span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">description =</span> article_description</span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a><span class="fu">scrape_page</span>(<span class="st">"https://www.nih.gov/news-events/news-releases"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>[Pause to Ponder:]</strong> Use a for loop over the first 5 pages:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>pages <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">"list"</span>, <span class="at">length =</span> <span class="dv">5</span>)</span>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="st">"https://www.nih.gov/news-events/news-releases?2025&amp;page=1&amp;1="</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>) {</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">str_c</span>(???)</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  pages[[i <span class="sc">+</span> <span class="dv">1</span>]] <span class="ot">&lt;-</span> ???</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>df_articles <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(pages)</span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_articles)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>pages <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">"list"</span>, <span class="at">length =</span> <span class="dv">6</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>pos <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># for (i in 0:4) {</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   url &lt;- str_c("https://www.nih.gov/news-events/news-releases?page=", i)</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   pages[[i + 1]] &lt;- scrape_page(url)</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2025</span><span class="sc">:</span><span class="dv">2024</span>) {</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">2</span>) {</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    pos <span class="ot">&lt;-</span> pos <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>    url <span class="ot">&lt;-</span> <span class="fu">str_c</span>(<span class="st">"https://www.nih.gov/news-events/news-releases?"</span>, i,</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"&amp;page="</span>, j, <span class="st">"&amp;1="</span>)</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>    pages[[pos]] <span class="ot">&lt;-</span> <span class="fu">scrape_page</span>(url)</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>df_articles <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(pages)</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_articles)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>[Pause to Ponder:]</strong> Use map functions in the purrr package:</p>
 <div class="cell">

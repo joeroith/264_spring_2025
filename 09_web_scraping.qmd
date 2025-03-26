@@ -221,26 +221,32 @@ NOW - continue this process to build a tibble with the most recent 50 NIH news r
 
 # Helper function to reduce html_nodes() |> html_text() code duplication
 get_text_from_page <- function(page, css_selector) {
-  ???
+  page |> 
+    html_nodes(css_selector) |> 
+    html_text()
 }
 
 # Main function to scrape and tidy desired attributes
 scrape_page <- function(url) {
     Sys.sleep(2)
     page <- read_html(url)
-    article_titles <- get_text_from_page(???)
-    article_dates <- get_text_from_page(???)
+    article_titles <- get_text_from_page(page, ".teaser-title")
+    article_dates <- get_text_from_page(page, ".date-display-single")
     article_dates <- mdy(article_dates)
-    article_description <- get_text_from_page(???)
+    article_description <- get_text_from_page(page, ".teaser-description")
     article_description <- str_trim(str_replace(article_description, 
                                                 ".*\\n", 
                                                 "")
                                     )
     
     tibble(
-      ???
+      title = article_titles, 
+      pubdate = article_dates, 
+      description = article_description
     )
 }
+
+scrape_page("https://www.nih.gov/news-events/news-releases")
 ```
 
 
@@ -249,12 +255,24 @@ scrape_page <- function(url) {
 ```{r}
 #| eval: FALSE
 
-pages <- vector("list", length = 5)
+"https://www.nih.gov/news-events/news-releases?2025&page=1&1="
 
-for (i in 0:4) {
-  url <- str_c(???)
-  pages[[i + 1]] <- ???
+pages <- vector("list", length = 6)
+pos <- 0
+# for (i in 0:4) {
+#   url <- str_c("https://www.nih.gov/news-events/news-releases?page=", i)
+#   pages[[i + 1]] <- scrape_page(url)
+# }
+
+for (i in 2025:2024) {
+  for (j in 0:2) {
+    pos <- pos + 1
+    url <- str_c("https://www.nih.gov/news-events/news-releases?", i,
+                 "&page=", j, "&1=")
+    pages[[pos]] <- scrape_page(url)
+  }
 }
+
 
 df_articles <- bind_rows(pages)
 head(df_articles)
