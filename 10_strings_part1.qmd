@@ -6,7 +6,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-You can download this .qmd file from [here](https://github.com/proback/264_fall_2024/blob/main/10_strings_part1.qmd).  Just hit the Download Raw File button.
+You can download this .qmd file from [here](https://github.com/joeroith/264_spring_2025/blob/main/10_strings_part1.qmd).  Just hit the Download Raw File button.
 
 This uses parts of R4DS Ch 14: Strings and Ch 15: Regular Expressions (both the first and second editions).
 
@@ -16,7 +16,7 @@ This uses parts of R4DS Ch 14: Strings and Ch 15: Regular Expressions (both the 
 
 library(tidyverse)
 #spotify <- read_csv("Data/spotify.csv") 
-spotify <- read_csv("https://proback.github.io/264_fall_2024/Data/spotify.csv")
+spotify <- read_csv("https://joeroith.github.io/264_spring_2025/Data/spotify.csv")
 
 spot_smaller <- spotify |>
   select(
@@ -182,7 +182,7 @@ str_to_title("makes this into title case")
 
 ## Matching Patterns
 
-In addition to manipulating strings, we might what to search through them to find matches.  For example, can I find all the songs that start with M? The songs from 2016? The album titles that include a number? 
+In addition to manipulating strings, we might want to search through them to find matches.  For example, can I find all the songs that start with M? The songs from 2016? The album titles that include a number? 
 
 
 ### str_view()
