@@ -1,5 +1,5 @@
 ---
-title: "Strings: Pre-class Video (Part 1)"
+title: "Strings: In-class Exercises (Part 1)"
 format:
   html: default
 editor_options: 

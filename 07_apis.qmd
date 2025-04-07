@@ -270,6 +270,7 @@ All right, let's try this!  First we'll grab total population and median househo
 
 # First using tidycenus
 library(tidycensus)
+options(tigris_use_cache = TRUE)
 sample_acs_data <- tidycensus::get_acs(
     year = 2021,
     state = "MN",
