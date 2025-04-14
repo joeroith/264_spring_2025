@@ -20,7 +20,7 @@ str functions to know for manipulating strings:
 - str_to_lower()
 - str_to_upper()
 - str_to_title()
-- str_replace() *not in video examples*
+- str_replace() *not in 10_strings examples*
 
 
 ```{r}

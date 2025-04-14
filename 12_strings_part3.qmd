@@ -6,7 +6,7 @@ editor_options:
   chunk_output_type: console
 ---
   
-You can download this .qmd file from [here](https://github.com/proback/264_fall_2024/blob/main/12_strings_part3.qmd).  Just hit the Download Raw File button.
+You can download this .qmd file from [here](https://github.com/joeroith/264_spring_2025/blob/main/12_strings_part3.qmd).  Just hit the Download Raw File button.
 
 ```{r}
 #| message: false
@@ -65,7 +65,7 @@ We will check out the Rotten Tomatoes page for the 2017 movie Coco, scrape infor
 # used to work
 # coco <- read_html("https://www.rottentomatoes.com/m/coco_2017")
 
-#robotstxt::paths_allowed("https://www.rottentomatoes.com/m/coco_2017")
+# robotstxt::paths_allowed("https://www.rottentomatoes.com/m/coco_2017")
 
 library(polite)
 coco <- "https://www.rottentomatoes.com/m/coco_2017" |>
