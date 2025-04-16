@@ -105,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -202,6 +202,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="./12_strings_part3.html">
  <span class="dropdown-text">Strings: Extra Practice (Part 3)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./13_text_analysis.html">
+ <span class="dropdown-text">Text analysis</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -221,6 +225,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="./miniproject3.html">
  <span class="dropdown-text">Mini-Project 3: Building a Personal Quarto Webpage</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./miniproject4.html">
+ <span class="dropdown-text">Mini-Project 4: Text Analysis</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -233,10 +241,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./miniproject4.html">Mini-Project 4: Text Analysis</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./miniproject1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mini-Project 1: Maps</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./miniproject2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mini-Project 2: Data Acquisition</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./miniproject3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mini-Project 3: Building a Personal Quarto Webpage</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./miniproject4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Mini-Project 4: Text Analysis</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -296,7 +345,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="timeline" class="level2">
 <h2 class="anchored" data-anchor-id="timeline">Timeline</h2>
-<p>Mini-Project 4 must be submitted on moodle by <strong>11:00 PM on Tues Nov 26</strong>. You should simply add a tab to your quarto webpage for Mini-Project 4, then you can just submit your URL (as long as your webpage also has a link to the GitHub repo containing your R code).</p>
+<p>Mini-Project 4 must be submitted on Moodle by <strong>11:00 PM on Sun Apr 27</strong>. You should simply add a tab to your quarto webpage for Mini-Project 4, then you can just submit your URL (as long as your webpage also has a link to the GitHub repo containing your R code).</p>
 </section>
 <section id="topic-ideas" class="level2">
 <h2 class="anchored" data-anchor-id="topic-ideas">Topic Ideas</h2>
@@ -304,14 +353,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="obama-tweets">Obama tweets</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#barack &lt;- read_csv("Data/tweets_potus.csv") </span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>barack <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://proback.github.io/264_fall_2024/Data/tweets_potus.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>barack <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://joeroith.github.io/264_spring_2025/Data/tweets_potus.csv"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#michelle &lt;- read_csv("Data/tweets_flotus.csv") </span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>michelle <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://proback.github.io/264_fall_2024/Data/tweets_flotus.csv"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>michelle <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://joeroith.github.io/264_spring_2025/Data/tweets_flotus.csv"</span>)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>tweets <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(barack <span class="sc">%&gt;%</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>tweets <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(barack <span class="sc">|&gt;</span> </span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">mutate</span>(<span class="at">person =</span> <span class="st">"Barack"</span>),</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                    michelle <span class="sc">%&gt;%</span> </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">mutate</span>(<span class="at">person =</span> <span class="st">"Michelle"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                    michelle <span class="sc">|&gt;</span> </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">mutate</span>(<span class="at">person =</span> <span class="st">"Michelle"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">timestamp =</span> <span class="fu">ymd_hms</span>(timestamp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>President Barack Obama became the first US President with an official Twitter account, when <span class="citation" data-cites="POTUS">@POTUS</span> went live on May 18, 2015. (Yes, there was a time before Twitter/X.) First Lady Michelle Obama got in on Twitter much earlier, though <a href="https://youtu.be/3Pze1f1x7yU">her first tweet</a> was not from <span class="citation" data-cites="FLOTUS">@FLOTUS</span>. All of the tweets from <span class="citation" data-cites="POTUS">@POTUS</span> and <span class="citation" data-cites="FLOTUS">@FLOTUS</span> are now archived on Twitter as <span class="citation" data-cites="POTUS44">@POTUS44</span> and <span class="citation" data-cites="FLOTUS44">@FLOTUS44</span>, and they are available as a csv download from the National Archive. You can read more <a href="https://obamawhitehouse.archives.gov/blog/2017/01/05/new-lenses-first-social-media-presidency">here</a>.</p>

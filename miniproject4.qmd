@@ -28,7 +28,7 @@ Available [here](https://drive.google.com/file/d/1_yvxyKQrajvEOPZnZbriUDPdQ08DyC
 
 ## Timeline
 
-Mini-Project 4 must be submitted on moodle by **11:00 PM on Tues Nov 26**.  You should simply add a tab to your quarto webpage for Mini-Project 4, then you can just submit your URL (as long as your webpage also has a link to the GitHub repo containing your R code). 
+Mini-Project 4 must be submitted on Moodle by **11:00 PM on Sun Apr 27**.  You should simply add a tab to your quarto webpage for Mini-Project 4, then you can just submit your URL (as long as your webpage also has a link to the GitHub repo containing your R code). 
 
 
 ## Topic Ideas
@@ -48,14 +48,14 @@ library(tidyverse)
 #| message: false
 
 #barack <- read_csv("Data/tweets_potus.csv") 
-barack <- read_csv("https://proback.github.io/264_fall_2024/Data/tweets_potus.csv")
+barack <- read_csv("https://joeroith.github.io/264_spring_2025/Data/tweets_potus.csv")
 #michelle <- read_csv("Data/tweets_flotus.csv") 
-michelle <- read_csv("https://proback.github.io/264_fall_2024/Data/tweets_flotus.csv")
+michelle <- read_csv("https://joeroith.github.io/264_spring_2025/Data/tweets_flotus.csv")
 
-tweets <- bind_rows(barack %>% 
+tweets <- bind_rows(barack |> 
                       mutate(person = "Barack"),
-                    michelle %>% 
-                      mutate(person = "Michelle")) %>%
+                    michelle |> 
+                      mutate(person = "Michelle")) |>
   mutate(timestamp = ymd_hms(timestamp))
 ```
 
