@@ -9,7 +9,7 @@ library(AER)
 library(tidyverse)
 data("NMES1988")
 
-NMES1988 <- NMES1988 %>%
+NMES1988 <- NMES1988 |>
     sample_n(500)    # use smaller data so shiny app runs faster
 ```
 

@@ -206,6 +206,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="./13_text_analysis.html">
  <span class="dropdown-text">Text analysis</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./14_first_shiny_instructions.html">
+ <span class="dropdown-text">First Shiny instructions</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -334,6 +338,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./13_text_analysis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Text analysis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14_first_shiny_instructions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">First Shiny instructions</span></a>
   </div>
 </li>
     </ul>
@@ -517,16 +527,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>title_temp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{xml_nodeset (10)}
- [1] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/repurposing ...
- [2] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/scientists- ...
- [3] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/twins-grow- ...
- [4] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/ai-screenin ...
- [5] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/blood-press ...
- [6] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/jay-bhattac ...
- [7] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/combination ...
- [8] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/social-fact ...
- [9] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/daily-physi ...
-[10] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-researc ...</code></pre>
+ [1] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-study-r ...
+ [2] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/nih-researc ...
+ [3] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/annual-repo ...
+ [4] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/repurposing ...
+ [5] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/scientists- ...
+ [6] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/twins-grow- ...
+ [7] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/ai-screenin ...
+ [8] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/blood-press ...
+ [9] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/jay-bhattac ...
+[10] &lt;h4 class="teaser-title"&gt;&lt;a href="/news-events/news-releases/combination ...</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Extract content from nodes with html_text(), html_name(), </span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#    html_attrs(), html_children(), html_table(), etc.</span></span>
@@ -534,16 +544,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>title_vec <span class="ot">&lt;-</span> <span class="fu">html_text</span>(title_temp)</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>title_vec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "Repurposing a blood pressure drug may prevent vision loss in inherited blinding diseases"           
- [2] "Scientists map unprecedented detail of connections and visual perception in the mouse brain"        
- [3] "Twins grow more slowly in early pregnancy than previously thought"                                  
- [4] "AI screening for opioid use disorder associated with fewer hospital readmissions"                   
- [5] "Blood pressure patterns in early pregnancy tied to hypertension risk up to 14 years later"          
- [6] "Jay Bhattacharya Begins Tenure as 18th Director of the National Institutes of Health"               
- [7] "Combination immunotherapy shrank a variety of metastatic gastrointestinal cancers"                  
- [8] "Social factors help explain worse cardiovascular health among adults in rural vs. urban communities"
- [9] "Daily physical activity, even at light intensities, linked to lower cancer risk"                    
-[10] "NIH researchers develop eye drops that slow vision loss in animals"                                 </code></pre>
+<pre><code> [1] "NIH study reveals how inflammation makes touch painful"                                          
+ [2] "NIH researchers supercharge ordinary clinical device to get a better look at the back of the eye"
+ [3] "Annual Report to the Nation: Cancer deaths continue to decline"                                  
+ [4] "Repurposing a blood pressure drug may prevent vision loss in inherited blinding diseases"        
+ [5] "Scientists map unprecedented detail of connections and visual perception in the mouse brain"     
+ [6] "Twins grow more slowly in early pregnancy than previously thought"                               
+ [7] "AI screening for opioid use disorder associated with fewer hospital readmissions"                
+ [8] "Blood pressure patterns in early pregnancy tied to hypertension risk up to 14 years later"       
+ [9] "Jay Bhattacharya Begins Tenure as 18th Director of the National Institutes of Health"            
+[10] "Combination immunotherapy shrank a variety of metastatic gastrointestinal cancers"               </code></pre>
 </div>
 </div>
 <p>You can also write this altogether with a pipe:</p>
@@ -560,16 +570,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">".teaser-title"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "Repurposing a blood pressure drug may prevent vision loss in inherited blinding diseases"           
- [2] "Scientists map unprecedented detail of connections and visual perception in the mouse brain"        
- [3] "Twins grow more slowly in early pregnancy than previously thought"                                  
- [4] "AI screening for opioid use disorder associated with fewer hospital readmissions"                   
- [5] "Blood pressure patterns in early pregnancy tied to hypertension risk up to 14 years later"          
- [6] "Jay Bhattacharya Begins Tenure as 18th Director of the National Institutes of Health"               
- [7] "Combination immunotherapy shrank a variety of metastatic gastrointestinal cancers"                  
- [8] "Social factors help explain worse cardiovascular health among adults in rural vs. urban communities"
- [9] "Daily physical activity, even at light intensities, linked to lower cancer risk"                    
-[10] "NIH researchers develop eye drops that slow vision loss in animals"                                 </code></pre>
+<pre><code> [1] "NIH study reveals how inflammation makes touch painful"                                          
+ [2] "NIH researchers supercharge ordinary clinical device to get a better look at the back of the eye"
+ [3] "Annual Report to the Nation: Cancer deaths continue to decline"                                  
+ [4] "Repurposing a blood pressure drug may prevent vision loss in inherited blinding diseases"        
+ [5] "Scientists map unprecedented detail of connections and visual perception in the mouse brain"     
+ [6] "Twins grow more slowly in early pregnancy than previously thought"                               
+ [7] "AI screening for opioid use disorder associated with fewer hospital readmissions"                
+ [8] "Blood pressure patterns in early pregnancy tied to hypertension risk up to 14 years later"       
+ [9] "Jay Bhattacharya Begins Tenure as 18th Director of the National Institutes of Health"            
+[10] "Combination immunotherapy shrank a variety of metastatic gastrointestinal cancers"               </code></pre>
 </div>
 </div>
 <p>And finally we wrap the 4 steps above into the <code>bow</code> and <code>scrape</code> functions from the <code>polite</code> package:</p>
@@ -581,16 +591,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>nih_title</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "Repurposing a blood pressure drug may prevent vision loss in inherited blinding diseases"           
- [2] "Scientists map unprecedented detail of connections and visual perception in the mouse brain"        
- [3] "Twins grow more slowly in early pregnancy than previously thought"                                  
- [4] "AI screening for opioid use disorder associated with fewer hospital readmissions"                   
- [5] "Blood pressure patterns in early pregnancy tied to hypertension risk up to 14 years later"          
- [6] "Jay Bhattacharya Begins Tenure as 18th Director of the National Institutes of Health"               
- [7] "Combination immunotherapy shrank a variety of metastatic gastrointestinal cancers"                  
- [8] "Social factors help explain worse cardiovascular health among adults in rural vs. urban communities"
- [9] "Daily physical activity, even at light intensities, linked to lower cancer risk"                    
-[10] "NIH researchers develop eye drops that slow vision loss in animals"                                 </code></pre>
+<pre><code> [1] "NIH study reveals how inflammation makes touch painful"                                          
+ [2] "NIH researchers supercharge ordinary clinical device to get a better look at the back of the eye"
+ [3] "Annual Report to the Nation: Cancer deaths continue to decline"                                  
+ [4] "Repurposing a blood pressure drug may prevent vision loss in inherited blinding diseases"        
+ [5] "Scientists map unprecedented detail of connections and visual perception in the mouse brain"     
+ [6] "Twins grow more slowly in early pregnancy than previously thought"                               
+ [7] "AI screening for opioid use disorder associated with fewer hospital readmissions"                
+ [8] "Blood pressure patterns in early pregnancy tied to hypertension risk up to 14 years later"       
+ [9] "Jay Bhattacharya Begins Tenure as 18th Director of the National Institutes of Health"            
+[10] "Combination immunotherapy shrank a variety of metastatic gastrointestinal cancers"               </code></pre>
 </div>
 </div>
 </section>
@@ -603,25 +613,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>nih_pubdate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "April 15, 2025" "April 9, 2025"  "April 7, 2025"  "April 3, 2025" 
- [5] "April 2, 2025"  "April 1, 2025"  "April 1, 2025"  "March 31, 2025"
- [9] "March 26, 2025" "March 21, 2025"</code></pre>
+<pre><code> [1] "April 23, 2025" "April 23, 2025" "April 21, 2025" "April 15, 2025"
+ [5] "April 9, 2025"  "April 7, 2025"  "April 3, 2025"  "April 2, 2025" 
+ [9] "April 1, 2025"  "April 1, 2025" </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>nih_description <span class="ot">&lt;-</span> <span class="fu">scrape</span>(session) <span class="sc">|&gt;</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">".teaser-description"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>nih_description</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "April 15, 2025 —     \n          NIH studies in animals show reserpine protects retinal-neurons necessary for vision, especially in females.  "                                    
- [2] "April 9, 2025 —     \n          NIH-funded project helps unravel the brain’s wiring, giving clues to how we see the world. "                                                       
- [3] "April 7, 2025 —     \n          NIH findings could lead to more efficient monitoring of twin pregnancies. "                                                                        
- [4] "April 3, 2025 —     \n          NIH-supported clinical trial shows AI tool as effective as healthcare providers in generating referrals to addiction specialists. "                
- [5] "April 2, 2025 —     \n          NIH-supported study reveals new risk group for future high blood pressure, heart disease. "                                                        
- [6] "April 1, 2025 —     \n          President Trump nominated Dr. Bhattacharya for the position on Nov. 26, 2024, and he was confirmed by the U.S. Senate on March 25, 2025.  "        
- [7] "April 1, 2025 —     \n          NIH trial shows new form of TIL therapy effective against colon, rectum, pancreas, and bile duct tumors. "                                         
- [8] "March 31, 2025 —     \n          NIH-funded study reveals variables, such as poverty and education, that may underpin higher rates of heart disease and its risk factors.\r\n\r\n "
- [9] "March 26, 2025 —     \n          NIH study finds number of steps taken daily may be more important for cancer risk than the intensity of activity. "                               
-[10] "March 21, 2025 —     \n          Treatment shows potential to slow the progression of human degenerative eye diseases, including retinitis pigmentosa.\r\n\r\n "                   </code></pre>
+<pre><code> [1] "April 23, 2025 —     \n          Researchers uncover the cellular and molecular basis for sensing heat and inflammatory pain. "                                            
+ [2] "April 23, 2025 —     \n          New technique brings retina into sharper focus\r\n\r\n. "                                                                                 
+ [3] "April 21, 2025 —     \n          Overall death rates from cancer declined steadily among both men and women from 2001 through 2022. "                                      
+ [4] "April 15, 2025 —     \n          NIH studies in animals show reserpine protects retinal-neurons necessary for vision, especially in females.  "                            
+ [5] "April 9, 2025 —     \n          NIH-funded project helps unravel the brain’s wiring, giving clues to how we see the world. "                                               
+ [6] "April 7, 2025 —     \n          NIH findings could lead to more efficient monitoring of twin pregnancies. "                                                                
+ [7] "April 3, 2025 —     \n          NIH-supported clinical trial shows AI tool as effective as healthcare providers in generating referrals to addiction specialists. "        
+ [8] "April 2, 2025 —     \n          NIH-supported study reveals new risk group for future high blood pressure, heart disease. "                                                
+ [9] "April 1, 2025 —     \n          President Trump nominated Dr. Bhattacharya for the position on Nov. 26, 2024, and he was confirmed by the U.S. Senate on March 25, 2025.  "
+[10] "April 1, 2025 —     \n          NIH trial shows new form of TIL therapy effective against colon, rectum, pancreas, and bile duct tumors. "                                 </code></pre>
 </div>
 </div>
 <p>Combine these extracted variables into a single tibble. Make sure the variables are formatted correctly - e.g.&nbsp;<code>pubdate</code> has <code>date</code> type, <code>description</code> does not contain the <code>pubdate</code>, etc.</p>
@@ -635,16 +645,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 10 × 3
    title                                                     pubdate description
    &lt;chr&gt;                                                     &lt;chr&gt;   &lt;chr&gt;      
- 1 Repurposing a blood pressure drug may prevent vision los… April … "April 15,…
- 2 Scientists map unprecedented detail of connections and v… April … "April 9, …
- 3 Twins grow more slowly in early pregnancy than previousl… April … "April 7, …
- 4 AI screening for opioid use disorder associated with few… April … "April 3, …
- 5 Blood pressure patterns in early pregnancy tied to hyper… April … "April 2, …
- 6 Jay Bhattacharya Begins Tenure as 18th Director of the N… April … "April 1, …
- 7 Combination immunotherapy shrank a variety of metastatic… April … "April 1, …
- 8 Social factors help explain worse cardiovascular health … March … "March 31,…
- 9 Daily physical activity, even at light intensities, link… March … "March 26,…
-10 NIH researchers develop eye drops that slow vision loss … March … "March 21,…</code></pre>
+ 1 NIH study reveals how inflammation makes touch painful    April … "April 23,…
+ 2 NIH researchers supercharge ordinary clinical device to … April … "April 23,…
+ 3 Annual Report to the Nation: Cancer deaths continue to d… April … "April 21,…
+ 4 Repurposing a blood pressure drug may prevent vision los… April … "April 15,…
+ 5 Scientists map unprecedented detail of connections and v… April … "April 9, …
+ 6 Twins grow more slowly in early pregnancy than previousl… April … "April 7, …
+ 7 AI screening for opioid use disorder associated with few… April … "April 3, …
+ 8 Blood pressure patterns in early pregnancy tied to hyper… April … "April 2, …
+ 9 Jay Bhattacharya Begins Tenure as 18th Director of the N… April … "April 1, …
+10 Combination immunotherapy shrank a variety of metastatic… April … "April 1, …</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># now clean the data</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>nih_top10 <span class="ot">&lt;-</span> nih_top10 <span class="sc">|&gt;</span></span>
@@ -655,16 +665,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 10 × 3
    title                                                  pubdate    description
    &lt;chr&gt;                                                  &lt;date&gt;     &lt;chr&gt;      
- 1 Repurposing a blood pressure drug may prevent vision … 2025-04-15 NIH studie…
- 2 Scientists map unprecedented detail of connections an… 2025-04-09 NIH-funded…
- 3 Twins grow more slowly in early pregnancy than previo… 2025-04-07 NIH findin…
- 4 AI screening for opioid use disorder associated with … 2025-04-03 NIH-suppor…
- 5 Blood pressure patterns in early pregnancy tied to hy… 2025-04-02 NIH-suppor…
- 6 Jay Bhattacharya Begins Tenure as 18th Director of th… 2025-04-01 President …
- 7 Combination immunotherapy shrank a variety of metasta… 2025-04-01 NIH trial …
- 8 Social factors help explain worse cardiovascular heal… 2025-03-31 NIH-funded…
- 9 Daily physical activity, even at light intensities, l… 2025-03-26 NIH study …
-10 NIH researchers develop eye drops that slow vision lo… 2025-03-21 Treatment …</code></pre>
+ 1 NIH study reveals how inflammation makes touch painful 2025-04-23 "Researche…
+ 2 NIH researchers supercharge ordinary clinical device … 2025-04-23 "New techn…
+ 3 Annual Report to the Nation: Cancer deaths continue t… 2025-04-21 "Overall d…
+ 4 Repurposing a blood pressure drug may prevent vision … 2025-04-15 "NIH studi…
+ 5 Scientists map unprecedented detail of connections an… 2025-04-09 "NIH-funde…
+ 6 Twins grow more slowly in early pregnancy than previo… 2025-04-07 "NIH findi…
+ 7 AI screening for opioid use disorder associated with … 2025-04-03 "NIH-suppo…
+ 8 Blood pressure patterns in early pregnancy tied to hy… 2025-04-02 "NIH-suppo…
+ 9 Jay Bhattacharya Begins Tenure as 18th Director of th… 2025-04-01 "President…
+10 Combination immunotherapy shrank a variety of metasta… 2025-04-01 "NIH trial…</code></pre>
 </div>
 </div>
 <p>NOW - continue this process to build a tibble with the most recent 50 NIH news releases, which will require that you iterate over 5 webpages! You should write at least one function, and you will need iteration–use both a <code>for</code> loop and appropriate <code>map_()</code> functions from <code>purrr</code>. Some additional hints:</p>
