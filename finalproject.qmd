@@ -18,9 +18,9 @@ Same pairs as for Mini-Project 2
 
 |                               | Tentative Due Date	|Points |
 |-------------------------------|---------------------|------:|
-|Stage I: Proposal			        |	Wed Dec 4 	        | 5     |
-|Stage II:	Peer Review				  | Tues Dec 10		      | 5     |
-|Stage III: Project Submission	|	Sat Dec 14		      | 80    |
+|Stage I: Proposal			        |	Mon May 5 	        | 5     |
+|Stage II:	Peer Review				  | Tues May 13		      | 5     |
+|Stage III: Project Submission	|	Thurs May 15		    | 80    |
 |Stage IV: Project Presentation	|	Sat Dec 14		      | 10    |
 |-------------------------------|---------------------|-------|
 |Total									        |                     |100    |
@@ -38,6 +38,8 @@ Same pairs as for Mini-Project 2
 - “*Tidy it*”.  Create a tidy tibble that will allow you to perform desired analyses.  This might involve stringr, mutate, filter, spread, parse_, etc.  You should use functions and iteration techniques where appropriate, and code with good style and commenting.
 - “*Visualize it*”.  Create plots that effectively tell a story about what insights can be gained from your data.  Unless you're doing a scrollytelling document, the user should be able to control and customize inputs to your plots.
 - “*Publish it*”.  We'll discuss options such as GitHub Pages, shinyapps.io, rconnect.stolaf.edu, etc.
+
+> You *MAY* use the same data scraped for Mini-Project 2. If you don't think there's enough there to tirn into a robust project, consider aquiring more data or totally switching gears into something else.
 
 
 ## Examples of good past projects
