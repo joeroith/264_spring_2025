@@ -73,8 +73,11 @@ We will also use these folders as well.  You can copy the URL for the folder int
 
 - [Ames example](https://github.com/joeroith/264_spring_2025/blob/main/Ames_example)
 
+Check out my Shiny app developed from a CIR project a few years ago:
 
-Check out my Shiny app on Ames Housing:
+- [Click here](https://jroith.shinyapps.io/Ponds_Plot_Dashboard/)
+
+Check out Prof. Roback's Shiny app on Ames Housing:
 
 - [Click here](https://proback.shinyapps.io/ProfR_Shiny_flexdashboard/)
 
