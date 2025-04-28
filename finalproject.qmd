@@ -21,7 +21,7 @@ Same pairs as for Mini-Project 2
 |Stage I: Proposal			        |	Mon May 5 	        | 5     |
 |Stage II:	Peer Review				  | Tues May 13		      | 5     |
 |Stage III: Project Submission	|	Thurs May 15		    | 80    |
-|Stage IV: Project Presentation	|	Sat Dec 14		      | 10    |
+|Stage IV: Project Presentation	|	Thurs May 15	      | 10    |
 |-------------------------------|---------------------|-------|
 |Total									        |                     |100    |
 
