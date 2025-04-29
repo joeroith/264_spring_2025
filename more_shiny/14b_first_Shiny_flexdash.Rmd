@@ -1,5 +1,5 @@
 ---
-title: "Old Faithful"
+title: "Old Faithful - Flexdashboard Example"
 output: flexdashboard::flex_dashboard
 runtime: shiny
 ---
