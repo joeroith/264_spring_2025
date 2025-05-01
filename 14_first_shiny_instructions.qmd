@@ -55,6 +55,8 @@ c) Note how user-input variables for ggplot attributes can be integrated with `.
 
 4. You might try having multiple inputs, or examining the Shiny CheatSheet Input Options (https://www.rstudio.com/resources/cheatsheets/) and using an input we haven't discussed yet.
 
+5. Create multiple shiny apps using your dataset and turn them into a flexdashboard. Check out [this website on using flexdashboard](https://pkgs.rstudio.com/flexdashboard/articles/using.html) for more information on how to organize layout, use multiple pages, change themes, and make your app more adaptable for mobile devices.
+
 ---------------------------------------------------------------
 
 
@@ -73,11 +75,11 @@ We will also use these folders as well.  You can copy the URL for the folder int
 
 - [Ames example](https://github.com/joeroith/264_spring_2025/blob/main/Ames_example)
 
-Check out my Shiny app developed from a CIR project a few years ago:
+Check out my (old school) Shiny app developed from a CIR project a few years ago:
 
 - [Click here](https://jroith.shinyapps.io/Ponds_Plot_Dashboard/)
 
-Check out Prof. Roback's Shiny app on Ames Housing:
+Check out Prof. Roback's Flexdashboard Shiny app on Ames Housing:
 
 - [Click here](https://proback.shinyapps.io/ProfR_Shiny_flexdashboard/)
 
