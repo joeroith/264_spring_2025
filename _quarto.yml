@@ -55,6 +55,7 @@ website:
         - 12_strings_part3.qmd
         - 13_text_analysis.qmd
         - 14_first_shiny_instructions.qmd
+        - 16_SQL_exercises.qmd
         
     - id: projects
       title: "Projects"
